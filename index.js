@@ -49,5 +49,11 @@ const AggErr = require('./modules/aggregateError');
 
 
 const internalErr = require('./modules/internalError');
-internalErr.loop(8);
-internalErr.brokenloop(1212);
+try {
+    internalErr.brokenloop(122)
+}
+catch (error) {
+    console.log("error");
+ }
+// internalErr.loop(122);
+// internalErr.brokenloop(0);
